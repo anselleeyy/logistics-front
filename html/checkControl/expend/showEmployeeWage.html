@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加员工工资</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+
+<div class="layui-form-item"  style="margin-top: 20px">
+    <form class="layui-form" action="" id="employeeWageForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">职员编号</label>
+            <div class="layui-input-inline">
+                <input type="text" id="employeeCode" name="employeeCode" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">职员姓名</label>
+            <div class="layui-input-inline">
+                <input type="text" id="employee" name="employee" required autocomplete="off" disabled class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">基本工资</label>
+            <div class="layui-input-inline">
+                <input type="text" id="basicWage" name="basicWage" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">岗位工资</label>
+            <div class="layui-input-inline">
+                <input type="text" id="stationWage" name="stationWage" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">津贴</label>
+            <div class="layui-input-inline">
+                <input type="text" id="allowance" name="allowance" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="date" id="date" disabled class="layui-input" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/checkControl/expend/showEmployeeWage.js"></script>
+
+</body>
+</html>

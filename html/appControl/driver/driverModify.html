@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>司机信息详情页</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+
+<div class="layui-form-item" style="margin-top: 10px">
+    <form class="layui-form" action="" id="driverForm">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">司机姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="driverName" name="driverName" disabled required lay-verify="required" placeholder="请输入司机姓名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">身份证号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="idCard" name="idCard" disabled required lay-verify="required|identity" placeholder="请输入身份证号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="phone" name="phone" required lay-verify="required|phone" placeholder="请输入电话" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="gender" disabled value="男" title="男" checked>
+                    <input type="radio" name="gender" disabled value="女" title="女">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">出生日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="birthday" disabled name="birthday" required lay-verify="required" placeholder="请输入出生日期" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">车号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carNo" name="carNo" required lay-verify="required" placeholder="请输入车号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">车型</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carType" name="carType" required lay-verify="required" placeholder="请输入车型" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">准载体积</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="allowCarryVolume" name="allowCarryVolume" required lay-verify="required|number" placeholder="请输入准载体积" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">（单位： 立方米）</div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">准载重量</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="allowCarryWeight" name="allowCarryWeight" required lay-verify="required|number" placeholder="请输入准载重量" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">（单位： 吨）</div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">住址</label>
+                <div class="layui-input-block" style="width: 514px">
+                    <input type="text" id="address" name="address" required lay-verify="required" placeholder="请输入司机住址" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">车厢长度</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carLength" name="carLength" required lay-verify="required" placeholder="请输入车厢长度" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">车厢宽度</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carWidth" name="carWidth" required lay-verify="required" placeholder="请输入车厢宽度" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">载物高度</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="goodsHeight" name="goodsHeight" required lay-verify="required" placeholder="请输入载物高度" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">驾驶证</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="driveLicence" name="driveLicence" required lay-verify="required" placeholder="请输入驾驶证" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">行驶证</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="runLicence" name="runLicence" required lay-verify="required" placeholder="请输入行驶证" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">营运证</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bizLicence" name="bizLicence" required lay-verify="required" placeholder="请输入营运证" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">保险证</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="insuranceCard" name="insuranceCard" required lay-verify="required" placeholder="请输入保险证" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">车架号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carFrameNo" name="carFrameNo" required lay-verify="required" placeholder="请输入车架号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">发动机号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="engineNo" name="engineNo" required lay-verify="required" placeholder="请输入发动机号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">车属单位</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carDept" name="carDept" required lay-verify="required" placeholder="请输入车属单位" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">单位电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carDeptTel" name="carDeptTel" required lay-verify="required|phone" placeholder="请输入车属单位电话" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">公司车</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" lay-skin="switch" id="switchValue" lay-filter="checkCondition" lay-text="是|否">
+                </div>
+            </div>
+            <input type="hidden" id="companyCar" name="companyCar" value="false">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-inline">
+                <input type="text" id="remark" name="remark" required lay-verify="required" placeholder="请输入备注" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit lay-filter="modifyDriver" id="modifyDriver">立即修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/appControl/driver/driverModify.js"></script>
+</body>
+</html>

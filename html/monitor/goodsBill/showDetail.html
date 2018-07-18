@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接货单填写页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <style>
+        .wd-100 {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-form-item" style="margin-top: 20px">
+    <form class="layui-form" action="" id="goodsBillForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label wd-100">发货客户编号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="sendGoodsCustomerNo" id="sendGoodsCustomerNo" disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">发货客户</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="sendGoodsCustomer" name="sendGoodsCustomer" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">发货客户电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="sendGoodsCustomerTel" name="sendGoodsCustomerTel" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label wd-100">发货客户地址</label>
+            <div class="layui-input-inline" style="width: 534px">
+                <input type="text" id="sendGoodsCustomerAddr" name="sendGoodsCustomerAddr" disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label wd-100">收货客户编号</label>
+            <div class="layui-input-inline">
+                <input type="text" id="receiveGoodsCustomerCode" name="receiveGoodsCustomerCode" disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">收货客户</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="receiveGoodsCustomer" name="receiveGoodsCustomer" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">收货客户电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="receiveGoodsCustomerTel" name="receiveGoodsCustomerTel" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label wd-100">收货客户地址</label>
+            <div class="layui-input-inline" style="width: 534px">
+                <input type="text" id="receiveGoodsCustomerAddr" name="receiveGoodsCustomerAddr" disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label wd-100">发货日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="sendGoodsDate" id="sendGoodsDate" disabled class="layui-input test-item" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">发货地址</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="sendGoodsAddr" name="sendGoodsAddr" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">收货地址</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="receiveGoodsAddr" name="receiveGoodsAddr" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">预期交货日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="predeliveryDate" id="predeliveryDate" disabled class="layui-input test-item" />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">实际交货日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="factDealDate" id="factDealDate" disabled class="layui-input test-item" />
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">代收货款</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="helpAcceptPayment" name="helpAcceptPayment" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">代收手续费率</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="acceptProcedureRate" name="acceptProcedureRate" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">付款方式</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="payMode" name="payMode" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">取货方式</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="fetchGoodsMode" name="fetchGoodsMode" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">填票人</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="writeBillPerson" name="writeBillPerson" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">填写日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="writeDate" id="writeDate" disabled class="layui-input test-item"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">是否有效</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" id="validity" name="validity" disabled lay-skin="switch" lay-text="有效|无效">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">是否审核</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" id="ifAudit" name="ifAudit" disabled lay-skin="switch" lay-text="审核|未审核">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">是否结账</label>
+                <div class="layui-input-inline">
+                    <input type="checkbox" id="ifSettleAccounts" name="ifSettleAccounts" disabled lay-skin="switch" lay-text="结账|未结账">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">中转地</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="transferStation" name="transferStation" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">中转费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="transferFee" name="transferFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">减款</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="reduceFund" name="reduceFund" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">付回扣</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="payKickback" name="payKickback" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">变更后金额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="moneyOfChangePay" name="moneyOfChangePay" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">送货费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carryGoodsFee" name="carryGoodsFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">运费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carriage" name="carriage" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">保险费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="insurance" name="insurance" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">职员编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="employeeCode" name="employeeCode" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">备注</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="remark" name="remark" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">接货点</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="acceptStation" name="acceptStation" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/goodsBillControl/detail/showDetail.js"></script>
+
+</body>
+</html>

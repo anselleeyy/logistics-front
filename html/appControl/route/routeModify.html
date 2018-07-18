@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>城市扩充信息修改页</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+<div class="layui-form-item">
+    <form class="layui-form" action="" id="cityForm">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">主要城市：</label>
+            <div class="layui-input-inline">
+                <input type="text" id="cityId" disabled class="layui-input" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">范围城市：</label>
+            <div class="layui-input-inline">
+                <select name="rangeCity" id="rangeCity" lay-filter="changeRange">
+                    <option value="">请选择范围城市</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">已选范围：</label>
+            <div class="layui-btn-container" id="selectedCity"></div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit lay-filter="modInfo" id="modInfo">立即修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/appControl/route/routeModify.js"></script>
+</body>
+</html>

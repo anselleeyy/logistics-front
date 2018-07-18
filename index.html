@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>国际物流管理系统</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">国际物流管理系统</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;" id="username">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">修改密码</a></dd>
+                    <dd><a href="javascript:;" onclick="logout()">退出</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="demo">
+                <li class="layui-nav-item" id="function_1">
+                    <a class="" href="javascript:;">票据管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/bill/billRelease/billRelease.html" data-id="1" data-text="票据分发">票据分发</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_2">
+                    <a class="" href="javascript:;">接货管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/goodsBillControl/edit/editGoodsBill.html" data-id="3" data-text="填写接货单">填写接货单</a></dd>
+                        <dd><a href="javascript:;" data-url="html/goodsBillControl/detail/goodsBillDetail.html" data-id="4" data-text="查询接货单">查询接货单</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_3">
+                    <a class="" href="javascript:;">配车管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/vehicleControl/edit/editCargoReceipt.html" data-id="5" data-text="填写运输合同">填写运输合同</a></dd>
+                        <dd><a href="javascript:;" data-url="html/vehicleControl/select/cargoReceiptDetail.html" data-id="6" data-text="查询运输合同">查询运输合同</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_4">
+                    <a class="" href="javascript:;">到货管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/getGoodsControl/callback/driverCallback.html" data-id="7" data-text="到货回执">到货回执</a></dd>
+                        <dd><a href="javascript:;" data-url="html/getGoodsControl/verify/verify.html" data-id="8" data-text="到货验收">到货验收</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_5">
+                    <a class="" href="javascript:;">中转管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/pass/company/write.html" data-id="9" data-text="中转公司">中转公司</a></dd>
+                        <dd><a href="javascript:;" data-url="html/pass/transfer/transferInfo.html" data-id="10" data-text="中转信息">中转信息</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_6">
+                    <a class="" href="javascript:;">结算管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/clearControl/goodsBill/goodsBillManage.html" data-id="11" data-text="货运单结算">货运单结算</a></dd>
+                        <dd><a href="javascript:;" data-url="html/clearControl/transport/transportManage.html" data-id="12" data-text="运输合同结算">运输合同结算</a></dd>
+                        <dd><a href="javascript:;" data-url="html/clearControl/wait/proxyFee.html" data-id="13" data-text="代收款结算">代收款结算</a></dd>
+                        <dd><a href="javascript:;" data-url="html/clearControl/extra/extraFee.html" data-id="14" data-text="其它结算">其它结算</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_7">
+                    <a class="" href="javascript:;">客户服务</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/customerService/get/informGet.html" data-id="16" data-text="提货回告">提货回告</a></dd>
+                        <dd><a href="javascript:;" data-url="html/customerService/arrive/informArrive.html" data-id="17" data-text="到货回告">到货回告</a></dd>
+                        <dd><a href="javascript:;" data-url="html/customerService/pass/informPass.html" data-id="18" data-text="中转回告">中转回告</a></dd>
+                        <dd><a href="javascript:;" data-url="html/customerService/got/informGot.html" data-id="19" data-text="已提回告">已提回告</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_8">
+                    <a class="" href="javascript:;">监控分析</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/monitor/goodsBill/goodsBill.html" data-id="21" data-text="运单监控">运单监控</a></dd>
+                        <dd><a href="javascript:;" data-url="html/monitor/statistics/statistics.html" data-id="22" data-text="统计报表">统计报表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_9">
+                    <a class="" href="javascript:;">成本核算</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/checkControl/income/extraIncome.html" data-id="23" data-text="收入录入">收入录入</a></dd>
+                        <dd><a href="javascript:;" data-url="html/checkControl/expend/expend.html" data-id="24" data-text="支出录入">支出录入</a></dd>
+                        <dd><a href="javascript:;" data-url="html/checkControl/cost/detail.html" data-id="25" data-text="成本报表">成本报表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_10">
+                    <a class="" href="javascript:;">应用管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/appControl/customer/customerManage.html" data-id="26" data-text="客户管理">客户管理</a></dd>
+                        <dd><a href="javascript:;" data-url="html/appControl/driver/driverManage.html" data-id="27" data-text="司机管理">司机管理</a></dd>
+                        <dd><a href="javascript:;" data-url="html/appControl/route/routeManage.html" data-id="28" data-text="线路管理">线路管理</a></dd>
+                        <dd><a href="javascript:;" data-url="html/appControl/employee/employeeManage.html" data-id="29" data-text="职员管理">职员管理</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" id="function_11">
+                    <a class="" href="javascript:;">系统管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="html/systemControl/userGroup/userGroupManage.html" data-id="31" data-text="用户组设置">用户组设置</a></dd>
+                        <dd><a href="javascript:;" data-url="html/systemControl/changePassword.html" data-id="33" data-text="修改密码">修改密码</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body main-layout-body">
+        <!-- 内容主体区域 -->
+        <div class="layui-tab layui-tab-brief main-layout-tab" lay-filter="tab" lay-allowClose="true">
+            <ul class="layui-tab-title">
+                <li class="layui-this welcome"> 国际物流管理系统 </li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show" style="background: #f5f5f5;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer" style="text-align: center">
+        <!-- 底部固定区域 -->
+        © www.ltysyn.cn - 国际物流管理系统
+    </div>
+</div>
+<script src="layui/layui.js"></script>
+<script src="js/jquery/jquery-3.3.1.js"></script>
+<script src="js/jquery/jquery.cookie.js"></script>
+<script src="js/nginx.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

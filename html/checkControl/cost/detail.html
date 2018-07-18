@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接货单填写页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+<div class="layui-form-item" style="margin-top: 20px">
+    <form class="layui-form" action="" id="goodsBillForm">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">收入</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="income" name="income" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">支出</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="payout" name="payout" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">营业收入</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bizIncome" name="bizIncome" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">运费金额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carriageMoney" name="carriageMoney" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">保险金额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="insuranceMoney" name="insuranceMoney" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">非营业收入</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="unbizIncome" name="unbizIncome" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">经营费用</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bizFee" name="bizFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">车运费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carCarriage" name="carCarriage" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">搬运工资</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="conveyWage" name="conveyWage" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">管理费用</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="manageFee" name="manageFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">办公费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="officeFee" name="officeFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">房租费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="houseRent" name="houseRent" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">水电费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="waterElecFee" name="waterElecFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电话费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="phoneFee" name="phoneFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">其他</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="other" name="other" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">财务费用</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="financeFee" name="financeFee" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">利润</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="profit" name="profit" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">工资</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="wage" name="wage" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">月份</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="month" name="month" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/checkControl/cost/detail.js"></script>
+
+</body>
+</html>

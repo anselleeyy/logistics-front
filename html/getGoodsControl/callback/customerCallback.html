@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户物流信息</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+
+<div class="layui-tab layui-tab-brief" lay-filter="demo">
+    <ul class="layui-tab-title">
+        <li class="layui-this">我收到的</li>
+        <li>收货历史</li>
+    </ul>
+    <div class="layui-tab-content" style="height: 100px; display: block">
+        <div class="layui-tab-item layui-show">
+            <table id="receiveTable" lay-filter="billTool"></table>
+            <script type="text/html" id="bar">
+                <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="confirm">确认收货</a>
+            </script>
+        </div>
+        <div class="layui-tab-item layui-show">
+            <table id="receivedTable" lay-filter="billTool"></table>
+            <script type="text/html" id="bar1">
+                <a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="confirm">查看详情</a>
+            </script>
+            <script id="createTime" type="text/html">
+                {{ createTime(d.receiveGoodsDate) }}
+            </script>
+        </div>
+    </div>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+<script src="../../../js/jquery/jquery.cookie.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/getGoodsControl/callback/customerCallback.js"></script>
+
+</body>
+</html>

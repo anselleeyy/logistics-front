@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>职员信息修改页</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+</head>
+<body>
+
+<div class="layui-form-item" style="margin-top: 10px">
+    <form class="layui-form" action="" id="cusForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">客户编号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="customerCode" id="customerCode" disabled lay-verify="required" placeholder="请输入客户编号" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">客户姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="customer" id="customer" disabled lay-verify="required" placeholder="请输入客户姓名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" id="phone" lay-verify="required|phone" placeholder="请输入电话" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">传真</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="fax" id="fax" lay-verify="required|fax" placeholder="请输入传真" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">邮编</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="postCode" id="postCode" lay-verify="required|postcode" placeholder="请输入邮编" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地址</label>
+            <div class="layui-input-inline" style="width: 514px">
+                <input type="text" name="address" id="address" lay-verify="required" placeholder="请输入地址" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">联系人</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="linkman" id="linkman" lay-verify="required" placeholder="请输入联系人" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">联系人手机</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="linkmanMobile" id="linkmanMobile" lay-verify="required|phone" placeholder="请输入联系人手机" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">客户类型</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="customerType" id="customerType" lay-verify="required" placeholder="请输入客户类型" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">企业性质</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="enterpriseProperty" id="enterpriseProperty" lay-verify="required" placeholder="请输入企业性质" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">企业规模</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="enterpriseSize" id="enterpriseSize" lay-verify="required" placeholder="请输入企业规模" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电子邮件</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" id="email" lay-verify="required|email" placeholder="请输入电子邮件" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit lay-filter="modifyCus" id="modifyCus">立即修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/appControl/customer/customerModify.js"></script>
+</body>
+</html>

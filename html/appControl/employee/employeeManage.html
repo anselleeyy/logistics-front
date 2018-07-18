@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职员管理页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">添加职员</li>
+            <li>职员查询</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                    <form class="layui-form" action="" id="empForm">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">职员姓名</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="employeeName" required lay-verify="required" placeholder="请输入职员姓名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">部门</label>
+                            <div class="layui-input-inline">
+                                <select name="department" id="department" lay-verify="required">
+                                    <option value="">请选择部门</option>
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请选择员工所在部门</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">职位</label>
+                            <div class="layui-input-inline">
+                                <select name="position" lay-verify="required">
+                                    <option value=""></option>
+                                    <option value="经理">经理</option>
+                                    <option value="助理">助理</option>
+                                    <option value="员工">员工</option>
+                                    <option value="派件员">派件员</option>
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请选择员工职位</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">性别</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="gender" value="男" title="男" checked>
+                                <input type="radio" name="gender" value="女" title="女">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户情况</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" lay-skin="switch" id="switchValue" lay-filter="checkCondition" lay-text="是|否" value="1">
+                            </div>
+                        </div>
+                        <input type="text" hidden name="condition" id="condition" value="0">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">出生日期</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="birthday" id="birthday" class="layui-input" />
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button type="button" class="layui-btn" lay-submit lay-filter="addEmp" id="addEmp">立即提交</button>
+                                <button type="reset" id="resetForm" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <table id="empTable" lay-filter="empTool" lay-data="{id: 'empTable'}"></table>
+                <script type="text/html" id="barDemo">
+                    <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" data-method="offset" lay-event="del">删除</a>
+                </script>
+                <script id="createTime" type="text/html">
+                    {{ createTime(d.birthday) }}
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="../../../layui/layui.js"></script>
+    <script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+    <script src="../../../js/nginx.js"></script>
+    <script src="../../../js/appControl/employee/employeeManage.js"></script>
+
+</body>
+</html>

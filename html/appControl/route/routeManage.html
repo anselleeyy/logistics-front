@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>线路管理页</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <style>
+    </style>
+</head>
+<body>
+
+
+<div class="layui-tab layui-tab-brief" lay-filter="demo">
+    <ul class="layui-tab-title">
+        <li class="layui-this">城市信息</li>
+        <li>添加城市范围信息</li>
+        <li>线路信息</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <table id="expandTable" lay-filter="expandTool"></table>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" data-method="offset" lay-event="del">删除</a>
+            </script>
+            <script type="text/html" id="cityFormat">
+                {{ format(d.cityId) }}
+            </script>
+            <script type="text/html" id="rangeFormat">
+                {{ format(d.rangeCity) }}
+            </script>
+        </div>
+        <div class="layui-tab-item">
+            <div class="layui-form-item">
+                <form class="layui-form" action="" id="cityForm">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">主要城市：</label>
+                        <div class="layui-input-inline">
+                            <select name="city" id="city" lay-verify="required" lay-search lay-filter="changeCity">
+                                <option value="">请选择城市</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">范围城市：</label>
+                        <div class="layui-input-inline">
+                            <select name="rangeCity" disabled id="rangeCity" lay-filter="changeRange">
+                                <option value="">请选择范围城市</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">已选范围：</label>
+                        <div class="layui-btn-container" id="selectedCity"></div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="addInfo" id="addInfo">立即提交</button>
+                            <button type="reset" id="resetForm" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="layui-tab-item">
+            <div style="padding: 20px; background-color: #F2F2F2;" id="routeInfo">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/appControl/route/routeManage.js"></script>
+</body>
+</html>

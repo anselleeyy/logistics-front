@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>往来业务页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+<div class="layui-form-item" style="margin-top: 20px">
+    <form class="layui-form" action="" id="contactsForm">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">发货客户</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="sendGoodsCustomer" name="sendGoodsCustomer" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">货运单编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="goodsBillCode" name="goodsBillCode" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">发货地址</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="sendGoodsAddr" name="sendGoodsAddr" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">收货地址</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="receiveGoodsAddr" name="receiveGoodsAddr" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">运费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carriage" name="carriage" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">保险费</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="insurance" name="insurance" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">本单金额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="billMoney" name="billMoney" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">应收金额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="moneyReceivable" name="moneyReceivable" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">已收金额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="receivedMoney" name="receivedMoney" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">余额</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="balance" name="balance" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label wd-100">发货日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="sendGoodsDate" id="sendGoodsDate" disabled class="layui-input test-item" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/monitor/statistics/contacts.js"></script>
+
+</body>
+</html>

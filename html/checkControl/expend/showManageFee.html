@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加员工工资</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+
+<div class="layui-form-item"  style="margin-top: 20px">
+    <form class="layui-form" action="" id="manageFeeForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">办公费</label>
+            <div class="layui-input-inline">
+                <input type="text" id="officeFee" name="officeFee" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">房租费</label>
+            <div class="layui-input-inline">
+                <input type="text" id="houseRent" name="houseRent" required autocomplete="off" disabled class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">水电费</label>
+            <div class="layui-input-inline">
+                <input type="text" id="waterElecFee" name="waterElecFee" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">电话费</label>
+            <div class="layui-input-inline">
+                <input type="text" id="phoneFee" name="phoneFee" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">其他支出</label>
+            <div class="layui-input-inline">
+                <input type="text" id="otherPayout" name="otherPayout" required disabled autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">支出月份</label>
+            <div class="layui-input-inline">
+                <input type="text" name="payoutMonth" id="payoutMonth" disabled class="layui-input" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">填写日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="writeDate" id="writeDate" disabled class="layui-input" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/checkControl/expend/showManageFee.js"></script>
+
+</body>
+</html>

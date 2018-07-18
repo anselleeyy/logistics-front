@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+
+<div class="layui-form-item" style="margin-top: 20px">
+    <form class="layui-form" action="" id="transferForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">中转地</label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" class="layui-input" id="transferStation" name="transferStation" disabled  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">中转验收人</label>
+                <div class="layui-input-inline">
+                    <input type="text" lay-verify="required" class="layui-input" id="transferCheck" name="transferCheck" disabled  />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">验收时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" lay-verify="required" class="layui-input" id="checkTime" name="checkTime" disabled  />
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">描述</label>
+            <div class="layui-input-inline" style="width: 514px">
+                <input type="text" lay-verify="required" class="layui-input" id="description" name="description"  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">中转公司名</label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" class="layui-input" id="transferCompany" name="transferCompany" disabled  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">中转地址</label>
+            <div class="layui-input-inline" style="width: 514px">
+                <input type="text" lay-verify="required" class="layui-input" id="transferAddr" name="transferAddr" disabled  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">中转地电话</label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" class="layui-input" id="transferStationTel" name="transferStationTel" disabled  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">中转费</label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" class="layui-input" id="transferFee" name="transferFee" disabled  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">中转后单号</label>
+            <div class="layui-input-inline">
+                <input type="text" lay-verify="required" class="layui-input" id="afterTransferBill" name="afterTransferBill" disabled  />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="addInfo" id="addInfo">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+<script src="../../../js/jquery/jquery.cookie.js"></script>
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/pass/transfer/write.js"></script>>
+</body>
+</html>

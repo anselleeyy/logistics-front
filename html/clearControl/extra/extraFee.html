@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>其他结算页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">新单填写</li>
+            <li>结算历史</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                <form class="layui-form" action="" id="extraFeeForm">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">科目名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="subjectName" name="subjectName" required lay-verify="required" placeholder="请输入科目名称" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">结算金额</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="balanceMoney" name="balanceMoney" required lay-verify="required|number" placeholder="请输入结算金额" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">备注</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="remark" name="remark" required lay-verify="required" placeholder="请输入备注" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">结算日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="balanceDate" id="balanceDate" class="layui-input" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">结算类型</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="balanceType" name="balanceType" required lay-verify="required" placeholder="请输入结算类型" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn" lay-submit lay-filter="addExtraFee" id="addExtraFee">立即提交</button>
+                            <button type="reset" id="resetForm" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <table id="extraFeeTable" lay-filter="extraFeeTool"></table>
+                <script id="createTime" type="text/html">
+                    {{ createTime(d.balanceDate) }}
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="../../../layui/layui.js"></script>
+    <script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+    <script src="../../../js/nginx.js"></script>
+    <script src="../../../js/clearControl/extra/extraFee.js"></script>
+
+</body>
+</html>

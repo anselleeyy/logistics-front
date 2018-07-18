@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接货单填写页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+<div class="layui-form-item" style="margin-top: 20px">
+    <form class="layui-form" action="" id="vehicleForm">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">司机编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="driverCode" name="driverCode" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">车号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carNo" name="carNo" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">车型</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carType" name="carType" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">准载重量</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="allowCarryWeight" name="allowCarryWeight" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">车厢宽度</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carWidth" name="carWidth" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">载物高度</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="goodsHeight" name="goodsHeight" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">承运费总计</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="carryFeeTotal" name="carryFeeTotal" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">加运费总计</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="addCarriageTotal" name="addCarriageTotal" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/monitor/statistics/vehicle.js"></script>
+
+</body>
+</html>

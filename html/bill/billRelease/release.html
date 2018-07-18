@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+
+<div class="layui-form-item" style="margin-top: 20px">
+    <form class="layui-form" action="" id="releaseForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">分发人</label>
+            <div class="layui-input-inline">
+                <input type="text" id="releasePerson" name="releasePerson" disabled class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">领票人</label>
+            <div class="layui-input-inline">
+                <select name="receiveBillPerson" id="receiveBillPerson" lay-verify="required" lay-search>
+                    <option value="">请选择领票人</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">领票时间</label>
+            <div class="layui-input-inline">
+                <input type="text" id="receiveBillTime" name="receiveBillTime" class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">接货点</label>
+            <div class="layui-input-inline">
+                <input type="text" id="acceptStation" name="acceptStation" required lay-verify="required" placeholder="请输入接货点" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-radius layui-btn-normal" lay-submit lay-filter="release" id="release">分发</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+<script src="../../../js/jquery/jquery.cookie.js"></script>
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/bill/billRelease/release.js"></script>
+</body>
+</html>

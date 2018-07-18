@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收入录入页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">填写营业外收入</li>
+            <li>查询营业外收入</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                <form class="layui-form" action="" id="extraIncomeForm">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="name" name="name" required lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">金额</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="money" name="money" required lay-verify="required|number" placeholder="请输入金额" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">收入月份</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="incomeMonth" id="incomeMonth" class="layui-input" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">填写日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="writeDate" id="writeDate" class="layui-input" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn" lay-submit lay-filter="addExtraIncome" id="addExtraIncome">立即提交</button>
+                            <button type="reset" id="resetForm" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <table id="extraIncomeTable"></table>
+                <script id="createTime" type="text/html">
+                    {{ createTime(d.writeDate) }}
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="../../../layui/layui.js"></script>
+    <script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+    <script src="../../../js/nginx.js"></script>
+    <script src="../../../js/checkControl/income/extraIncome.js"></script>
+
+</body>
+</html>

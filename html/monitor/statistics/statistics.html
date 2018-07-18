@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运单监控</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">打印客户运量</li>
+            <li>打印专线整体</li>
+            <li>打印司机运量</li>
+            <li>打印车辆成本</li>
+            <li>打印往来业务</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <table id="customerAmountTable"></table>
+            </div>
+            <div class="layui-tab-item layui-show">
+                <table id="lineOverallTable"></table>
+            </div>
+            <div class="layui-tab-item layui-show">
+                <table id="driverAmountTable"></table>
+            </div>
+            <div class="layui-tab-item">
+                <table id="carCostTable" lay-filter="carCostTool"></table>
+                <script type="text/html" id="barDemo1">
+                    <a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="detail">查看详情</a>
+                </script>
+            </div>
+            <div class="layui-tab-item">
+                <table id="contactsServiceTable" lay-filter="contactsServiceTool"></table>
+                <script type="text/html" id="barDemo2">
+                    <a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="detail">查看详情</a>
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="../../../layui/layui.js"></script>
+    <script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+    <script src="../../../js/nginx.js"></script>
+    <script src="../../../js/monitor/statistics/statistics.js"></script>
+
+</body>
+</html>

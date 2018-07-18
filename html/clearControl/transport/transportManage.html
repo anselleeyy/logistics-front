@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运输合同结算页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">新结运费</li>
+            <li>结算历史</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <table id="transportTable1" lay-filter="transportTool"></table>
+                <script type="text/html" id="barDemo1">
+                    <a class="layui-btn layui-btn-xs" lay-event="clear">结算</a>
+                    <a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="detail">查看详情</a>
+                </script>
+            </div>
+            <div class="layui-tab-item">
+                <table id="transportTable2" lay-filter="transportTool"></table>
+                <script type="text/html" id="barDemo2">
+                    <a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="detail">查看详情</a>
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="../../../layui/layui.js"></script>
+    <script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+    <script src="../../../js/nginx.js"></script>
+    <script src="../../../js/clearControl/transport/transportManage.js"></script>
+
+</body>
+</html>

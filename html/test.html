@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<form class="layui-form" action="" id="empForm">
+    <div class="layui-form-item">
+        <div class="layui-input-inline">
+            <input id="test3" type="text" class="layui-input" name="date">
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit lay-filter="addEmp" id="addEmp">立即提交</button>
+                <button type="reset" id="resetForm" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use(['layer', 'form', 'element', 'jquery', 'table', 'laydate'], function() {
+        let laydate = layui.laydate,
+            form = layui.form,
+            $ = layui.jquery;
+        //年月选择器
+        laydate.render({
+            elem: '#test3'
+            , type: 'month'
+        });
+
+        form.on('submit(addEmp)',function () {
+            $.ajax({
+                type: 'post',
+                url: 'http://127.0.0.1:9999/test',
+                data: $("#empForm").serialize(),
+                dataType: 'json',
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+            return false;
+        })
+    })
+</script>
+</body>
+</html>

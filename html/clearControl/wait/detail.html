@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运输合同结算页面</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                <form class="layui-form" action="" id="proxyFeeForm">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">客户编号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="customerCode" name="customerCode" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">货运单编号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="goodsBillCode" name="goodsBillCode" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">应收货款</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="accountReceivable" name="accountReceivable" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">实收货款</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="factReceiveFund" name="factReceiveFund" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">货款变更</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="goodsPayChange" name="goodsPayChange" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">佣金率</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="commisionRate" name="commisionRate" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">应收佣金</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="commisionReceivable" name="commisionReceivable" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">已收佣金</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="receivedCommision" name="receivedCommision" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">结算时间</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="balanceDate" name="balanceDate" disabled autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../layui/layui.js"></script>
+    <script src="../../../js/jquery/jquery-3.3.1.js"></script>
+
+    <script src="../../../js/nginx.js"></script>
+    <script src="../../../js/clearControl/wait/detail.js"></script>
+
+</body>
+</html>

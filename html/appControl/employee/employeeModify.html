@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>职员信息修改页</title>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+</head>
+<body>
+
+<div class="layui-form-item" style="margin-top: 10px">
+    <form class="layui-form" action="" id="empForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">职员编号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="employeeCode" id="employeeCode" class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">职员姓名</label>
+            <div class="layui-input-inline">
+                <input type="text" name="employeeName" id="employeeName" class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">部门</label>
+            <div class="layui-input-inline">
+                <select name="department" lay-verify="required" id="department">
+                    <option value=""></option>
+                    <option value="管理组">管理组</option>
+                    <option value="票据组">票据组</option>
+                    <option value="财务组">财务组</option>
+                    <option value="客服组">客服组</option>
+                    <option value="监控组">监控组</option>
+                    <option value="客户组">客户组</option>
+                </select>
+            </div>
+            <div class="layui-form-mid layui-word-aux">请选择员工所在部门</div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">职位</label>
+            <div class="layui-input-inline">
+                <select name="position" id="position" lay-verify="required">
+                    <option value=""></option>
+                    <option value="经理">经理</option>
+                    <option value="助理">助理</option>
+                    <option value="员工">员工</option>
+                    <option value="派件员">派件员</option>
+                </select>
+            </div>
+            <div class="layui-form-mid layui-word-aux">请选择员工职位</div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block">
+                <input type="radio" name="gender" value="男" title="男">
+                <input type="radio" name="gender" value="女" title="女">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户情况</label>
+            <div class="layui-input-block">
+                <input type="radio" name="condition" value="1" title="是" checked>
+                <input type="radio" name="condition" value="0" title="否">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">出生日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="birthday" id="birthday" class="layui-input" disabled />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn layui-btn-radius layui-btn-normal" lay-submit lay-filter="modifyEmp" id="modifyEmp">立即修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../layui/layui.js"></script>
+<script src="../../../js/nginx.js"></script>
+<script src="../../../js/jquery/jquery-3.3.1.js"></script>
+<script src="../../../js/appControl/employee/employeeModify.js"></script>
+</body>
+</html>
